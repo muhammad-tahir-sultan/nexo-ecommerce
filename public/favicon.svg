@@ -1,0 +1,45 @@
+<svg width="64" height="64" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="favPlateBg" cx="30%" cy="20%" r="90%">
+      <stop offset="0%" stop-color="#162238" />
+      <stop offset="60%" stop-color="#0B111E" />
+      <stop offset="100%" stop-color="#050811" />
+    </radialGradient>
+    <linearGradient id="favPlateRim" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="favCyan" x1="10" y1="8" x2="34" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="favEmerald" x1="34" y1="8" x2="10" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34D399" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="favChrome" x1="16" y1="12" x2="28" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#64748B" />
+    </linearGradient>
+  </defs>
+
+  <rect x="1.5" y="1.5" width="41" height="41" rx="11" fill="url(#favPlateBg)" stroke="url(#favPlateRim)" stroke-width="1.8" />
+  <circle cx="22" cy="22" r="10" fill="#00F2FE" fill-opacity="0.15" />
+
+  {/* Back Emerald Loop */}
+  <path d="M27.5 12C32 16 33.5 24 29 29.5C25.5 33.8 19 32.5 16 28.5" stroke="url(#favEmerald)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
+
+  {/* Front Cyan Loop */}
+  <path d="M16.5 32C12 28 10.5 20 15 14.5C18.5 10.2 25 11.5 28 15.5" stroke="url(#favCyan)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
+
+  {/* Crossing Diagonal */}
+  <path d="M14.5 14.5L29.5 29.5" stroke="url(#favChrome)" stroke-width="4.2" stroke-linecap="round" />
+  <path d="M15 15L29 29" stroke="url(#favCyan)" stroke-width="2.2" stroke-linecap="round" />
+
+  {/* Pillars */}
+  <path d="M14.5 30V14" stroke="url(#favCyan)" stroke-width="3.6" stroke-linecap="round" />
+  <path d="M29.5 14V30" stroke="url(#favEmerald)" stroke-width="3.6" stroke-linecap="round" />
+
+  {/* Center Spark */}
+  <circle cx="22" cy="22" r="2.5" fill="#FFFFFF" />
+</svg>

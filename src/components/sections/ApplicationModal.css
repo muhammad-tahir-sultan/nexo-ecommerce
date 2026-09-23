@@ -1,0 +1,282 @@
+.application-wizard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* Stepper */
+.wizard-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.step-node {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.node-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.node-label {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.step-node.is-active .node-num {
+  background: var(--cyan-primary);
+  color: #04060c;
+  border-color: var(--cyan-primary);
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.4);
+}
+
+.step-node.is-active .node-label {
+  color: #ffffff;
+}
+
+.step-line {
+  flex: 1;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 0 0.85rem;
+}
+
+.step-line.is-active {
+  background: var(--gradient-brand);
+}
+
+/* Form Fields */
+.wizard-step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.field-label {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.field-input,
+.field-select,
+.field-textarea {
+  width: 100%;
+  background: rgba(8, 12, 22, 0.8);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.925rem;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.field-input:focus,
+.field-select:focus,
+.field-textarea:focus {
+  border-color: var(--cyan-primary);
+  box-shadow: 0 0 16px rgba(0, 242, 254, 0.2);
+}
+
+.field-input.has-error {
+  border-color: #ef4444;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.field-input.has-icon {
+  padding-left: 2.75rem;
+}
+
+.field-hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.field-error {
+  font-size: 0.75rem;
+  color: #ef4444;
+}
+
+/* Radio Status Cards */
+.account-status-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.status-option-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(14, 22, 38, 0.5);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.status-option-card input[type="radio"] {
+  accent-color: var(--cyan-primary);
+  width: 18px;
+  height: 18px;
+}
+
+.status-option-card:hover {
+  border-color: var(--glass-border-bright);
+}
+
+.status-option-card.is-selected {
+  border-color: var(--cyan-primary);
+  background: rgba(0, 242, 254, 0.08);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.1);
+}
+
+.status-option-content {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.status-icon {
+  color: var(--cyan-primary);
+  flex-shrink: 0;
+}
+
+.status-option-content strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.status-option-content span {
+  font-size: 0.775rem;
+  color: var(--text-secondary);
+}
+
+/* Review Box */
+.review-snapshot-box {
+  background: rgba(14, 22, 38, 0.6);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.snapshot-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.snapshot-item span {
+  color: var(--text-muted);
+}
+
+.snapshot-item strong {
+  color: #ffffff;
+}
+
+/* Step Action Buttons */
+.step-actions {
+  margin-top: 0.5rem;
+}
+
+.step-actions.dual {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Success View */
+.application-success-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+  padding: 1.5rem 0.5rem;
+}
+
+.success-icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+}
+
+.success-title {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.success-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  max-width: 480px;
+}
+
+.success-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  background: rgba(14, 22, 38, 0.5);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 1.15rem 1.5rem;
+  width: 100%;
+  text-align: left;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}

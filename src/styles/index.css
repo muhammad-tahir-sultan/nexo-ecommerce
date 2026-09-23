@@ -1,0 +1,218 @@
+@import './variables.css';
+
+/* Universal Reset & Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-darkest);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Background Atmosphere Grid & Ambient Light */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(0, 242, 254, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 25%, rgba(16, 185, 129, 0.07) 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(99, 102, 241, 0.06) 0%, transparent 55%),
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Typography Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Common Layout Containers */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Section Common Spacing */
+.section {
+  padding-top: clamp(3.5rem, 6vw, 6rem);
+  padding-bottom: clamp(3.5rem, 6vw, 6rem);
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  background: rgba(0, 242, 254, 0.08);
+  border: 1px solid rgba(0, 242, 254, 0.25);
+  border-radius: var(--radius-full);
+  color: var(--cyan-primary);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.section-title {
+  font-size: clamp(1.65rem, 2.8vw, 2.6rem);
+  margin-bottom: 1rem;
+}
+
+.section-desc {
+  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+  color: var(--text-secondary);
+}
+
+/* Gradient Text Utilities */
+.text-gradient {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-emerald {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Global CTA Banner Box */
+.cta-banner-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(14, 22, 38, 0.95) 0%, rgba(8, 12, 22, 0.98) 100%);
+  border: 1px solid var(--glass-border-bright);
+  border-radius: var(--radius-xl);
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 3vw, 3rem);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 60px rgba(0, 242, 254, 0.05);
+  position: relative;
+  overflow: hidden;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.cta-banner-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 250px;
+  background: radial-gradient(ellipse, rgba(0, 242, 254, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-banner-box .section-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.cta-banner-box .section-desc {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  color: var(--text-secondary);
+}
+
+.cta-banner-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-darkest);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 242, 254, 0.25);
+  color: #fff;
+}

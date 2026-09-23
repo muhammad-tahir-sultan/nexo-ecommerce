@@ -1,0 +1,76 @@
+.nexo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  line-height: 1;
+  width: fit-content;
+}
+
+.badge-sm {
+  padding: 0.3rem 0.65rem;
+  font-size: 0.75rem;
+}
+
+.badge-md {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.825rem;
+}
+
+.badge-lg {
+  padding: 0.55rem 1.15rem;
+  font-size: 0.925rem;
+}
+
+/* Variants */
+.badge-cyan {
+  background: rgba(0, 242, 254, 0.1);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  color: var(--cyan-primary);
+}
+
+.badge-emerald {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: var(--emerald-glow);
+}
+
+.badge-violet {
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  color: #a78bfa;
+}
+
+.badge-amber {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #fbbf24;
+}
+
+.badge-neutral {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-secondary);
+}
+
+.badge-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 8px currentColor;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.5;
+  }
+}

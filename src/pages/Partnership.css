@@ -1,0 +1,185 @@
+.model-breakdown-section {
+  position: relative;
+}
+
+.model-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.split-card .card-inner {
+  gap: 1.5rem;
+  padding: 2.5rem;
+}
+
+.split-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.split-pct {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.split-pct.cyan {
+  color: var(--cyan-primary);
+  text-shadow: 0 0 30px rgba(0, 242, 254, 0.4);
+}
+
+.split-pct.emerald {
+  color: var(--emerald-glow);
+  text-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+}
+
+.split-card-title {
+  font-size: 1.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.split-card-subtitle {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.split-card-summary {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.split-bullet-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.split-bullet-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.split-bullet-list li svg {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+/* Qualification Section */
+.qualification-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.qual-card .card-inner {
+  gap: 1.25rem;
+}
+
+.qual-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.text-red {
+  color: #ef4444;
+}
+
+.qual-title {
+  font-size: 1.35rem;
+  color: #ffffff;
+}
+
+.qual-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.qual-list li {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.qual-list strong {
+  color: #ffffff;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+/* Ownership Terms Card */
+.ownership-terms-card .card-inner {
+  padding: 3rem;
+  gap: 2rem;
+}
+
+.terms-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.terms-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.terms-sub {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.terms-clauses-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.clause-item {
+  background: rgba(14, 22, 38, 0.5);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.clause-item strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--cyan-primary);
+  margin-bottom: 0.4rem;
+}
+
+.clause-item p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.terms-cta-row {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .model-split-grid,
+  .qualification-grid,
+  .terms-clauses-grid {
+    grid-template-columns: 1fr;
+  }
+}

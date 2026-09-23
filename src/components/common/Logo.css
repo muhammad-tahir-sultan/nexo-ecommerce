@@ -1,0 +1,98 @@
+/* Nexo Brand Logo Styles */
+
+.nexo-brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  user-select: none;
+}
+
+.nexo-logo-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+}
+
+.nexo-brand-logo:hover .nexo-logo-wrapper {
+  transform: translateY(-1px) scale(1.04);
+}
+
+.nexo-logo-svg {
+  display: block;
+  filter: drop-shadow(0 4px 14px rgba(0, 242, 254, 0.28));
+  transition: filter var(--transition-normal);
+}
+
+.nexo-brand-logo:hover .nexo-logo-svg {
+  filter: drop-shadow(0 6px 20px rgba(0, 242, 254, 0.45))
+          drop-shadow(0 2px 10px rgba(16, 185, 129, 0.3));
+}
+
+.nexo-logo-aura {
+  position: absolute;
+  inset: -2px;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.25) 0%, transparent 70%);
+  border-radius: var(--radius-lg);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.nexo-brand-logo:hover .nexo-logo-aura {
+  opacity: 1;
+}
+
+/* Typography */
+.nexo-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 0.18rem;
+}
+
+.nexo-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.32rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.nexo-name-accent {
+  background: linear-gradient(135deg, #00f2fe 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nexo-brand-domain {
+  font-family: var(--font-heading);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  color: var(--cyan-primary);
+  text-transform: uppercase;
+}
+
+/* Sizes */
+.nexo-brand-sm .nexo-brand-name {
+  font-size: 1.1rem;
+}
+
+.nexo-brand-sm .nexo-brand-domain {
+  font-size: 0.54rem;
+  letter-spacing: 0.22em;
+}
+
+.nexo-brand-lg .nexo-brand-name {
+  font-size: 1.65rem;
+}
+
+.nexo-brand-lg .nexo-brand-domain {
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+}

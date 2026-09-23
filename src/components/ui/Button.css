@@ -1,0 +1,108 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  position: relative;
+  white-space: nowrap;
+  user-select: none;
+  overflow: hidden;
+}
+
+.btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Sizes */
+.btn-sm {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+}
+
+.btn-md {
+  padding: 0.75rem 1.4rem;
+  font-size: 0.95rem;
+}
+
+.btn-lg {
+  padding: 0.95rem 1.85rem;
+  font-size: 1.05rem;
+  border-radius: var(--radius-lg);
+}
+
+/* Primary Cyan-Emerald Brand Glow */
+.btn-primary {
+  background: var(--gradient-brand);
+  color: #04060c;
+  box-shadow: 0 4px 20px rgba(0, 242, 254, 0.35);
+}
+
+.btn-primary:hover:not(:disabled) {
+  box-shadow: 0 6px 28px rgba(0, 242, 254, 0.55);
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+/* Glass Variant */
+.btn-glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border-bright);
+  color: var(--text-primary);
+  backdrop-filter: blur(12px);
+}
+
+.btn-glass:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Outline Cyan Variant */
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(0, 242, 254, 0.4);
+  color: var(--cyan-primary);
+}
+
+.btn-outline:hover:not(:disabled) {
+  background: rgba(0, 242, 254, 0.1);
+  border-color: var(--cyan-primary);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
+  transform: translateY(-2px);
+}
+
+/* WhatsApp Emerald Variant */
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover:not(:disabled) {
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Glow Pill Variant */
+.btn-glow {
+  background: #ffffff;
+  color: #070a14;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.btn-glow:hover:not(:disabled) {
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}

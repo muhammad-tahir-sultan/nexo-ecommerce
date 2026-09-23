@@ -1,0 +1,131 @@
+.wa-float-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.85rem;
+}
+
+.wa-bubble {
+  background: rgba(14, 22, 38, 0.95);
+  border: 1px solid rgba(37, 211, 102, 0.35);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(37, 211, 102, 0.12);
+  backdrop-filter: blur(16px);
+  padding: 0.7rem 0.9rem;
+  border-radius: var(--radius-md);
+  max-width: 200px;
+  position: relative;
+  animation: wa-slide-in 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wa-bubble-close {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  color: var(--text-muted);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: color var(--transition-fast);
+}
+
+.wa-bubble-close:hover {
+  color: #fff;
+}
+
+.wa-bubble-header {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.35rem;
+}
+
+.wa-bubble-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 0 8px #25d366;
+}
+
+.wa-bubble-title {
+  font-family: var(--font-heading);
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.wa-bubble-msg {
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.wa-float-btn {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.wa-float-btn:hover {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.65);
+}
+
+.wa-ping-glow {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid #25d366;
+  animation: wa-ping 2.4s infinite cubic-bezier(0, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+@keyframes wa-ping {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  70%, 100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes wa-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .wa-float-container {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+  .wa-bubble {
+    max-width: 250px;
+    font-size: 0.8rem;
+  }
+}
