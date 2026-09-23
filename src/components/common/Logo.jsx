@@ -1,24 +1,19 @@
 import React from 'react';
-import LogoMark from './LogoMark';
 import './Logo.css';
 
 /**
- * Reusable Master Logo Component for Nexo Ecommerce
- * Renders the interlocking Nexus emblem along with precision typography.
+ * Nexo Ecommerce - Master 3D Brand Logo
+ * Features the signature 3D interlocking chrome & neon emblem with typography.
  */
 export default function Logo({ size = 'md', showText = true, className = '' }) {
-  const markSizes = {
-    sm: 28,
-    md: 36,
-    lg: 46,
-  };
-
-  const markSize = markSizes[size] || 36;
-
   return (
     <div className={`nexo-brand-logo nexo-brand-${size} ${className}`}>
       <div className="nexo-logo-wrapper">
-        <LogoMark size={markSize} />
+        <img
+          src="/nexo_symbol.png"
+          alt="Nexo Ecommerce Emblem"
+          className="nexo-logo-img"
+        />
         <div className="nexo-logo-aura" />
       </div>
       {showText && (

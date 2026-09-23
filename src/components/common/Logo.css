@@ -1,4 +1,4 @@
-/* Nexo Brand Logo Styles */
+/* Nexo Brand Logo Styles (3D Master Emblem) */
 
 .nexo-brand-logo {
   display: inline-flex;
@@ -13,29 +13,50 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform var(--transition-fast);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #060913;
+  border: 1px solid var(--glass-border-bright);
+  box-shadow: 0 4px 18px rgba(0, 242, 254, 0.28), 0 0 20px rgba(16, 185, 129, 0.15);
+  transition: transform var(--transition-fast), box-shadow var(--transition-normal), border-color var(--transition-fast);
 }
 
 .nexo-brand-logo:hover .nexo-logo-wrapper {
   transform: translateY(-1px) scale(1.04);
+  box-shadow: 0 6px 26px rgba(0, 242, 254, 0.45), 0 0 28px rgba(16, 185, 129, 0.3);
+  border-color: rgba(0, 242, 254, 0.55);
 }
 
-.nexo-logo-svg {
+.nexo-logo-img {
   display: block;
-  filter: drop-shadow(0 4px 14px rgba(0, 242, 254, 0.28));
-  transition: filter var(--transition-normal);
+  object-fit: cover;
+  border-radius: 9px;
+  transition: transform var(--transition-slow);
 }
 
-.nexo-brand-logo:hover .nexo-logo-svg {
-  filter: drop-shadow(0 6px 20px rgba(0, 242, 254, 0.45))
-          drop-shadow(0 2px 10px rgba(16, 185, 129, 0.3));
+.nexo-brand-logo:hover .nexo-logo-img {
+  transform: scale(1.05);
+}
+
+.nexo-brand-sm .nexo-logo-img {
+  width: 32px;
+  height: 32px;
+}
+
+.nexo-brand-md .nexo-logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+.nexo-brand-lg .nexo-logo-img {
+  width: 52px;
+  height: 52px;
 }
 
 .nexo-logo-aura {
   position: absolute;
-  inset: -2px;
-  background: radial-gradient(circle, rgba(0, 242, 254, 0.25) 0%, transparent 70%);
-  border-radius: var(--radius-lg);
+  inset: -8px;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.35) 0%, transparent 70%);
   pointer-events: none;
   opacity: 0;
   transition: opacity var(--transition-normal);
@@ -49,13 +70,13 @@
 .nexo-brand-text {
   display: flex;
   flex-direction: column;
-  line-height: 1;
+  line-height: 1.05;
   gap: 0.18rem;
 }
 
 .nexo-brand-name {
   font-family: var(--font-display);
-  font-size: 1.32rem;
+  font-size: 1.35rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   color: #ffffff;
@@ -73,14 +94,14 @@
   font-family: var(--font-heading);
   font-size: 0.62rem;
   font-weight: 700;
-  letter-spacing: 0.26em;
+  letter-spacing: 0.28em;
   color: var(--cyan-primary);
   text-transform: uppercase;
 }
 
 /* Sizes */
 .nexo-brand-sm .nexo-brand-name {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 .nexo-brand-sm .nexo-brand-domain {
