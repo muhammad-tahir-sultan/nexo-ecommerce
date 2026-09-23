@@ -10,7 +10,7 @@ export const BRAND_CONFIG = {
   description:
     'Institutional-grade eBay and multi-marketplace store management for US and European account holders. You own the store, we operate the entire infrastructure, profits are shared 60/40.',
   url: 'https://nexoecommerce.com',
-  contactEmail: 'operations@nexoecommerce.com',
+  contactEmail: 'nexoecommece@gmail.com',
   whatsappNumber: '923051658777',
   whatsappMessage: 'Hello! I am interested in partnering with Nexo Ecommerce for automated store operations.',
   hours: '24/7 Operations Desk',
