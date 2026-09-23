@@ -32,7 +32,7 @@ export default function Home({ onOpenApplyModal }) {
           <div className="hero-content">
             <div className="hero-badge-wrap">
               <Badge variant="cyan" icon={Sparkles} size="md">
-                Institutional Marketplace Operations
+                5+ Years Operations · 146+ Managed Accounts
               </Badge>
             </div>
 
@@ -42,7 +42,7 @@ export default function Home({ onOpenApplyModal }) {
             </h1>
 
             <p className="hero-subtitle">
-              Turn your seller eligibility into an automated, profitable digital asset. We are actively working and accepting store partners across Germany, Italy, France, the UK, Spain, all European countries, and the USA. Our dedicated operations team manages product research, SEO listings, supplier fulfillment, and 24/7 client care while you maintain 100% legal account and banking ownership.
+              Turn your seller eligibility into an automated, profitable digital asset. Backed by 5+ years of operational mastery, we manage 146+ active stores across Germany (63+), the UK (34+), the US (22+), and other European markets (27+). Our team handles product sourcing, SEO listings, supplier fulfillment, and 24/7 client care while you maintain 100% legal account and banking ownership.
             </p>
 
             <div className="hero-cta-group">
@@ -70,6 +70,10 @@ export default function Home({ onOpenApplyModal }) {
 
             <div className="hero-trust-bullets">
               <div className="trust-bullet">
+                <Award size={16} className="text-cyan" />
+                <span>5+ Years Experience</span>
+              </div>
+              <div className="trust-bullet">
                 <ShieldCheck size={16} className="text-emerald" />
                 <span>Zero Upfront Inventory Capital</span>
               </div>
@@ -88,16 +92,16 @@ export default function Home({ onOpenApplyModal }) {
               <div className="markets-badge-label">
                 <span className="live-dot" />
                 <Globe size={13} className="text-cyan" />
-                <span>Actively working and accepting partners from:</span>
+                <span>146+ Active Partner Accounts Across:</span>
               </div>
               <div className="markets-list">
-                <span className="country-chip"><span className="flag">🇩🇪</span> Germany</span>
+                <span className="country-chip"><span className="flag">🇩🇪</span> Germany <strong>(63+ Accounts)</strong></span>
+                <span className="country-chip"><span className="flag">🇬🇧</span> UK <strong>(34+ Accounts)</strong></span>
+                <span className="country-chip"><span className="flag">🇺🇸</span> US <strong>(22+ Accounts)</strong></span>
+                <span className="country-chip highlight-chip"><span className="flag">🇪🇺</span> Other EU <strong>(27+ Accounts)</strong></span>
                 <span className="country-chip"><span className="flag">🇮🇹</span> Italy</span>
                 <span className="country-chip"><span className="flag">🇫🇷</span> France</span>
-                <span className="country-chip"><span className="flag">🇬🇧</span> UK</span>
                 <span className="country-chip"><span className="flag">🇪🇸</span> Spain</span>
-                <span className="country-chip highlight-chip"><span className="flag">🇪🇺</span> All Europe Countries</span>
-                <span className="country-chip"><span className="flag">🇺🇸</span> USA</span>
               </div>
             </div>
           </div>

@@ -20,21 +20,21 @@ export default function TrustTicker() {
 
           <div className="ticker-item">
             <div className="ticker-icon emerald">
-              <ShieldCheck size={22} />
+              <Users size={22} />
             </div>
             <div className="ticker-meta">
-              <span className="ticker-val">100% Client Ownership</span>
-              <span className="ticker-lbl">Direct Personal Bank Escrow</span>
+              <span className="ticker-val">146+ Live Accounts</span>
+              <span className="ticker-lbl">DE 63+ · UK 34+ · US 22+ · EU 27+</span>
             </div>
           </div>
 
           <div className="ticker-item">
             <div className="ticker-icon cyan">
-              <Users size={22} />
+              <Award size={22} />
             </div>
             <div className="ticker-meta">
-              <span className="ticker-val">US & EU Eligible</span>
-              <span className="ticker-lbl">Verified Account Holders</span>
+              <span className="ticker-val">5+ Years Experience</span>
+              <span className="ticker-lbl">Proven Marketplace Operations</span>
             </div>
           </div>
 

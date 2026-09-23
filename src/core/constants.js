@@ -28,9 +28,16 @@ export const PARTNERSHIP_TERMS = {
   ownershipGuarantee: '100% Client Legal & Financial Account Ownership',
 };
 
+export const REGIONAL_ACCOUNTS = [
+  { region: 'Germany', count: '63+', flag: '🇩🇪', activeStores: 63, label: 'Germany Accounts' },
+  { region: 'United Kingdom', count: '34+', flag: '🇬🇧', activeStores: 34, label: 'UK Accounts' },
+  { region: 'United States', count: '22+', flag: '🇺🇸', activeStores: 22, label: 'US Accounts' },
+  { region: 'Other EU Countries', count: '27+', flag: '🇪🇺', activeStores: 27, label: 'Other EU Accounts' },
+];
+
 export const OPERATIONAL_STATISTICS = [
   { label: 'Cumulative GMV Managed', value: '$4.2M+', change: '+38% YoY' },
-  { label: 'Active Partner Stores', value: '48+', change: 'US & EU' },
-  { label: 'Avg. Partner Net Yield', value: '€3,850/mo', change: '40% Share' },
+  { label: 'Active Managed Stores', value: '146+', change: 'DE (63) · UK (34) · US (22) · Other (27)' },
+  { label: 'Industry Experience', value: '5+ Years', change: 'Marketplace Mastery' },
   { label: 'Account Defect Rate', value: '< 0.08%', change: 'Top Rated Plus' },
 ];
