@@ -124,30 +124,31 @@ export default function About({ onOpenApplyModal }) {
               </div>
             </Card>
 
-            {/* Founder 2: Usama Hanan */}
+            {/* Leader 2: Tehseen Sajjad */}
             <Card className="leader-card">
               <div className="leader-img-wrapper">
                 <img
-                  src="/Usama_Hanan_Business_Partner.png"
-                  alt="Usama Hanan, Co-Founder & Head of Business Partnerships"
+                  src="/Tehseen_Sajjad_Account_Manager.jpg"
+                  alt="Tehseen Sajjad, Account Manager at Nexo Ecommerce"
                   className="leader-img"
                 />
                 <div className="leader-badge-pill">
-                  <ShieldCheck size={14} className="text-emerald" />
-                  <span>Founding Partner</span>
+                  <ShieldCheck size={14} className="text-cyan" />
+                  <span>Account Manager</span>
                 </div>
               </div>
 
               <div className="leader-meta">
-                <h3 className="leader-name">Usama Hanan</h3>
-                <span className="leader-role">Co-Founder & Head of Business Partnerships</span>
+                <h3 className="leader-name">Tehseen Sajjad</h3>
+                <span className="leader-role">Account Manager at Nexo Ecommerce</span>
                 <p className="leader-bio">
-                  Specializes in partner onboarding, international identity vetting, and direct institutional account management. Usama ensures all partner contracts remain 100% compliant with European and US financial regulations.
+                  Dedicated Account Manager overseeing partner onboarding, day-to-day storefront communications, and operational health. Tehseen ensures seamless coordination between store owners and our technical fulfillment departments, maintaining consistent store performance and client satisfaction.
                 </p>
                 <div className="leader-skills">
-                  <span>Partner Onboarding</span>
-                  <span>Contract Architecture</span>
-                  <span>Banking & Escrow Integrity</span>
+                  <span>Account Management</span>
+                  <span>Partner Success</span>
+                  <span>Store Performance</span>
+                  <span>Client Care</span>
                 </div>
               </div>
             </Card>
