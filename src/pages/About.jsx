@@ -13,7 +13,7 @@ import {
 import Card from '../components/ui/Card';
 import Badge from '../components/ui/Badge';
 import Button from '../components/ui/Button';
-import { BRAND_CONFIG, OPERATIONAL_STATISTICS } from '../core/constants';
+import { BRAND_CONFIG, OPERATIONAL_STATISTICS, REGIONAL_ACCOUNTS } from '../core/constants';
 import './About.css';
 
 export default function About({ onOpenApplyModal }) {
@@ -24,13 +24,13 @@ export default function About({ onOpenApplyModal }) {
         <div className="container">
           <div className="section-header">
             <Badge variant="cyan" icon={Users} size="md" className="section-tag">
-              The Organization Behind the Stores
+              5+ Years Operations · 146+ Stores
             </Badge>
             <h1 className="section-title">
               We Build & Operate <span className="text-gradient">Marketplace Cash-Flow Assets</span>
             </h1>
             <p className="section-desc">
-              Bridging the gap between qualified account holders and high-margin algorithmic e-commerce. You provide the verified store ownership; we provide the complete operational machinery.
+              Bridging the gap between qualified account holders and high-margin algorithmic e-commerce. You provide the verified store ownership; we provide 5+ years of operational machinery.
             </p>
           </div>
         </div>
@@ -49,7 +49,7 @@ export default function About({ onOpenApplyModal }) {
                 Across the United States and Europe, millions of individuals possess verified identity and residency credentials capable of opening high-trust seller accounts on leading global marketplaces. Yet, 98% of these individuals lack the 60+ hours per week, deep catalog software, and supply-chain logistics required to scale a profitable operation.
               </p>
               <p className="story-para">
-                Meanwhile, our team spent years engineering algorithmic catalog discovery, domestic US/EU fulfillment relationships, and proactive account compliance protocols.
+                Meanwhile, our team spent 5+ years engineering algorithmic catalog discovery, domestic US/EU fulfillment relationships, and proactive account compliance protocols across 146+ active partner accounts.
               </p>
               <p className="story-para">
                 <strong>Nexo Ecommerce was engineered to unite these two strengths:</strong> Your legitimate ownership and banking escrow combined with our multi-disciplinary operational execution, bonded by an uncompromising 60/40 performance split.
@@ -72,6 +72,22 @@ export default function About({ onOpenApplyModal }) {
                       <strong className="pill-val text-gradient">{stat.value}</strong>
                     </div>
                   ))}
+                </div>
+
+                {/* Regional Distribution */}
+                <div className="regional-distribution-box">
+                  <span className="regional-box-title">Active Partner Distribution</span>
+                  <div className="regional-pill-grid">
+                    {REGIONAL_ACCOUNTS.map((acc) => (
+                      <div key={acc.region} className="regional-pill-card">
+                        <span className="regional-flag">{acc.flag}</span>
+                        <div className="regional-meta">
+                          <strong className="regional-count">{acc.count}</strong>
+                          <span className="regional-label">{acc.region}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </Card>
             </div>
